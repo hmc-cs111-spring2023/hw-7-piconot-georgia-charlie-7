@@ -9,9 +9,11 @@ describe_ why _you made the change._
 
 6: we kept the same general structure, but we had to adapt it to work within Scala's 
 syntax; for example, we had to switch from just the raw NEWS format to having it in 
-quotes, and need more keywords so that we can call functions without parentheses. 
-I'm pretty happy with how it turned out though, as I think it's still pretty 
-readable.
+quotes, need more keywords so that we can call functions without parentheses, and changed
+"Halt" to instead be "StayHere". Additionally, in order to have error handeling for the
+surroundings input be simpler, it takes in the letter B instead of N, E, W or S, and bases
+the surroundings off of the input given in the NEWS order. I'm pretty happy with how it
+turned out though, as I think it's still pretty readable.
 
 **On a scale of 1–10 (where 10 is "very difficult"), how difficult was it to map your syntax to the provided API?**
 
