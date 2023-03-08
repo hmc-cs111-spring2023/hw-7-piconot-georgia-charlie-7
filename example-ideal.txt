@@ -1,0 +1,17 @@
+// State 0: move left
+when “**x*” 0 switch West 0     // go all the way to the left
+when “**W*” 0 switch Halt 1     // can't go left anymore, so try to go up
+
+// State 1: move up
+when “x***” 1 switch North 1	// go all the way to the top
+when “N*x*” 1 switch South 2	// can't go up any more, so try to go down 
+
+// States 2 and 3: fill from top to bottom, left to right
+
+// State 2: fill this column to the bottom
+when “***x” 2 switch South 2	// go all the way to the bottom
+when “*x*S” 2 switch East 3     // can't go down anymore, so try to go right
+
+// State 3: fill this column to the top
+when “x***” 3 switch North 3	// go all the way to the top
+when “Nx**” 3 switch East 2     // can't go up anymore, so try to go right
